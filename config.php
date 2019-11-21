@@ -116,7 +116,7 @@ $config['backup_pass'] = 'QazWsxEdc2019';
 // $config['backup_rdir']
 // This is the file path on the remote server to store the backups.
 // Please note this folder path must exist.
-$config['backup_rdir'] = '/backups/';
+$config['backup_rdir'] = '';
 
 // ======================================
 // BACKUP RETENTION (ftp_retention.php)
