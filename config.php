@@ -33,7 +33,7 @@ $config['check_version'] = '2';
 // $config['whm_hostname']
 // Este es el nombre de host o la dirección IP del servidor cPanel en el que se encuentra alojado su revendedor.
 
-$config['whm_hostname'] = '';
+$config['whm_hostname'] = 'vps79.itfinden.com';
 
 // $config['whm_port']
 // El valor del puerto de inicio de sesión de cPanel. Por lo general, esto es 2086 para no SSL y 2087 para conexiones SSL.
