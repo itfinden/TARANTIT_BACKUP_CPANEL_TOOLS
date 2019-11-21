@@ -1,10 +1,4 @@
 <?php
-/**
- * =========================================
- *  WHM Backup Solutions Configuration File
- *  https://whmbackup.solutions
- * =========================================
- */
 
 // $config['date_format']
 // The date format is shown in the logs, this format can be altered to suit localised preferences.
@@ -14,7 +8,7 @@ $config['date_format'] = "F j, Y, g:i:s a";
 // $config['timezone']
 // To ensure the log dates and times line up with where you are, you can set the timezone you're in,
 // in the setting below. Possible values can be found https://secure.php.net/manual/en/timezones.php.
-$config['timezone'] = date_default_timezone_set('Europe/London');
+$config['timezone'] = date_default_timezone_set('America/Santiago');
 
 // $config['obfuscate_config']
 // To provide an additional layer of security albeit minor, you can obfuscate config.php the next time
