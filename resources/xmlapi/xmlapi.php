@@ -132,7 +132,7 @@
 class xmlapi
 {
     // should debugging statements be printed?
-    private $debug			= false;
+    private $debug			= true;
 
     // The host to connect to
     private $host				=	'127.0.0.1';
