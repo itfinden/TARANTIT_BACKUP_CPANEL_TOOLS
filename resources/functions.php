@@ -178,7 +178,7 @@ function record_log($type, $log_message, $stop = false)
 
 	// Prepare message to be written to log file.
 	$message = "================================
-ItFinden Backup Solutions (https://whmbackup.solutions) - V" . $version . "
+ItFinden Backup Solutions (https://www.itfinden.com) - V" . $version . "
 " . date($config["date_format"], time()) . " - " . $log_message . "
 ";
 	// Add Line Breaks For Clearer Console/HTML Output
