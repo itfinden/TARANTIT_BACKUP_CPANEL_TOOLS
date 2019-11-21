@@ -49,7 +49,7 @@ $config['whm_username'] = 'root';
 // The password or hash should then be entered into $config['whm_auth_key'];
 // password - Is the password used to login to your WHM.
 // hash - This is using the hash generated within WHM (Remote Access Key or API Token)
-$config['whm_auth'] = 'kill.,2005';
+$config['whm_auth'] = 'hash';
 $config['whm_auth_key'] = 'K9TATUJNOTY7QMO9K80XD7DB142DEW3U';
 
 // $config['type_of_backup']
