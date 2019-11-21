@@ -70,7 +70,7 @@ foreach ($config_variables as $var) {
 $retrieve_status = retrieve_status($config_name);
 if ($retrieve_status["error"] == "1") {
 	record_log("system", $retrieve_status["response"]);
-	$email_log = email_log("ERROR - Reseller Backup Log (WHM Backup Solutions)", "The backup of \"" . $config['whm_username'] .
+	$email_log = email_log("ERROR - Reseller Backup Log (ItFinden Backup Solutions)", "The backup of \"" . $config['whm_username'] .
 		"\" has an error that required attention. The log of backup initiation is available below.\r\n", TRUE);
 	if ($email_log["error"] == "0") {
 		record_log("note", "Retrieve Status Log File Successfully Sent To " . $config["backup_email"]);
@@ -92,7 +92,7 @@ try
 		$xmlapi->hash_auth($config["whm_username"], $config["whm_auth_key"]);
 	} else {
 		record_log("system", "Invalid Authentication Type, Set &#36;config[\"whm_auth\"] to either password or hash.");
-		$email_log = email_log("ERROR - Reseller Backup Log (WHM Backup Solutions)", "The backup of \"" . $config['whm_username'] .
+		$email_log = email_log("ERROR - Reseller Backup Log (ItFinden Backup Solutions)", "The backup of \"" . $config['whm_username'] .
 			"\" has an error that required attention. The log of backup initiation is available below.\r\n", TRUE);
 		if ($email_log["error"] == "0") {
 			record_log("note", "Invalid Authentication Log File Successfully Sent To " . $config["backup_email"]);
@@ -128,7 +128,7 @@ try
 
 		if ($generate_account_list["error"] == "1") {
 			record_log("note", "(Generation) ERROR: " . $generate_account_list["response"]);
-			$email_log = email_log("ERROR - Reseller Backup Log (WHM Backup Solutions)", "The backup of \"" . $config['whm_username'] .
+			$email_log = email_log("ERROR - Reseller Backup Log (ItFinden Backup Solutions)", "The backup of \"" . $config['whm_username'] .
 				"\" has an error that required attention. The log of backup initiation is available below.\r\n");
 			if ($email_log["error"] == "0") {
 				record_log("note", "Generation Log File Successfully Sent To " . $config["backup_email"]);
@@ -216,7 +216,7 @@ try
 // Generate Variable Not Set, Backup Already Started, All Accounts Backed Up, Send Log File in Email.
 	if (($generate == false) && ($retrieve_status["status"] == "2")) {
 		if (!empty($config['backup_email'])) {
-			$email_log = email_log("Reseller Backup Log (WHM Backup Solutions)", "The backup of \"" . $config['whm_username'] .
+			$email_log = email_log("Reseller Backup Log (ItFinden Backup Solutions)", "The backup of \"" . $config['whm_username'] .
 				"\" has been completed. The log of backup initiation is available below.\r\n");
 			if ($email_log["error"] == "0") {
 				record_log("note", "Backup Completion Log File Successfully Sent To " . $config["backup_email"]);
@@ -231,7 +231,7 @@ try
 
 } catch (exception $e) {
 	record_log("system", "cPanel API Error: " . $e->getMessage());
-	$email_log = email_log("ERROR - Reseller Backup Log (WHM Backup Solutions)", "The backup of \"" . $config['whm_username'] .
+	$email_log = email_log("ERROR - Reseller Backup Log (ItFinden Backup Solutions)", "The backup of \"" . $config['whm_username'] .
 		"\" has an error that required attention. The log of backup initiation is available below.\r\n", TRUE);
 	if ($email_log["error"] == "0") {
 		record_log("note", "cPanel API Error Log File Successfully Sent To " . $config["backup_email"]);
